@@ -29,6 +29,10 @@ Temporary Items
 *.swo
 *~
 
+# Claude Code
+.claude/*
+!.claude/settings.json
+
 # Local environment files
 .env
 .env.local

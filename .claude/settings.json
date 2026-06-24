@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "WebFetch(domain:stonks-nextjs.vercel.app)",
+      "Bash(dig:*)",
+      "WebFetch(domain:meanstack2021.onrender.com)",
+      "Bash(gh repo list:*)",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-update-page"
+    ],
+    "deny": []
+  }
+}
