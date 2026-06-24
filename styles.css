@@ -603,6 +603,12 @@ ul {
     gap: 1.5rem;
 }
 
+/* Keep a single featured project readable instead of letting it fill the wide grid. */
+.projects-grid-single {
+    grid-template-columns: minmax(0, 680px);
+    justify-content: center;
+}
+
 .project-card {
     position: relative;
     border-radius: 12px;
