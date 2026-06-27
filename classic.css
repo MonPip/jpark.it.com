@@ -233,11 +233,109 @@ body {
 }
 
 /* ============================================
+   Experience Section
+   ============================================ */
+.experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-entry,
+.experience-earlier {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-header h3 {
+    font-size: 1.35rem;
+    color: var(--text-primary);
+}
+
+.experience-company {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.experience-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.stat-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.stat-callout {
+    min-width: 130px;
+}
+
+.stat-number {
+    display: block;
+    color: var(--text-primary);
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.stat-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.experience-summary,
+.experience-earlier-item p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.experience-summary {
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-accomplishments {
+    color: var(--text-secondary);
+    padding-left: 1.2rem;
+}
+
+.experience-accomplishments li {
+    margin-bottom: 0.5rem;
+}
+
+.experience-earlier h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-earlier-items {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+/* ============================================
    Projects Section
    ============================================ */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     gap: var(--spacing-md);
 }
 
@@ -265,6 +363,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: start;
+    gap: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -281,6 +380,18 @@ body {
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 500;
+}
+
+.project-status {
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
 }
 
 .project-description {
@@ -313,6 +424,11 @@ body {
 
 .project-link:hover {
     color: var(--primary-dark);
+}
+
+.project-note {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 /* ============================================
@@ -531,6 +647,10 @@ body {
    Responsive Design
    ============================================ */
 @media (max-width: 768px) {
+    .nav-container {
+        gap: var(--spacing-xs);
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -544,12 +664,15 @@ body {
     }
 
     .nav-menu {
-        gap: var(--spacing-sm);
+        flex: 1;
+        justify-content: flex-end;
+        min-width: 0;
+        gap: 0.25rem;
     }
 
     .nav-link {
-        padding: 0.5rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.35rem;
+        font-size: 0.78rem;
     }
 
     .cta-buttons {
@@ -574,6 +697,12 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .project-header,
+    .experience-header {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
@@ -591,6 +720,16 @@ body {
         width: 12px;
         height: 12px;
     }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .contact-links .contact-item {
+        flex: 1 1 auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -599,10 +738,22 @@ body {
     }
 
     .nav-container {
-        padding: 0 var(--spacing-sm);
+        justify-content: center;
+        padding: 0 0.5rem;
     }
 
     .logo {
-        font-size: 1.25rem;
+        display: none;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 0.35rem 0.15rem;
+        font-size: 0.68rem;
     }
 }
