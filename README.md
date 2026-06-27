@@ -1,39 +1,37 @@
-# James Park - Professional Portfolio
+# James Park - Professional Site
 
-A modern, minimal portfolio website showcasing product management expertise in architecture, strategy, and technical prototyping.
+Static professional site for James Park, focused on product management, founder-built AI SaaS work, healthcare data workflows, and regulated systems.
 
-## Current Status (Last Updated: 2025-12-23)
+## Current Status
 
-- ✅ Site deployed to GitHub Pages
-- ✅ Custom domain `jpark.app` configured with Namecheap DNS
-- ✅ DNS propagated successfully (pointing to GitHub Pages)
-- ⏳ **Waiting for HTTPS certificate** from Let's Encrypt (typically takes 20-45 min after DNS propagation)
-  - Check: https://github.com/MonPip/jpark/settings/pages
-  - Once available, enable "Enforce HTTPS" checkbox
-- ✅ Title updated to "Product Professional"
-- ✅ Contact info updated: james@jpark.app, LinkedIn, GitHub
-- ✅ Stock Tracker project added to portfolio
-- ✅ Contact links centered (3-item layout)
+- Site is deployed to GitHub Pages at `jpark.app`.
+- `index.html` is the primary portfolio surface.
+- `classic.html` is a light fallback and should stay content-aligned with `index.html`.
+- There is no build step.
 
 ## Features
 
-- Modern & minimal design
+- Cinematic primary design with a simpler classic fallback
 - Fully responsive layout
 - Smooth scrolling navigation
 - Intersection observer animations
-- Optimized for performance
-- Mobile-first approach
+- Vanilla HTML, CSS, and JavaScript
 
 ## Sections
 
-- **About**: Professional background and expertise
-- **Projects**: Featured work and case studies
-- **Skills**: Technical and product management capabilities
-- **Contact**: Links to connect
+- **About**: Personal story and product operating style
+- **Experience**: Craneware, Talogy, innate.ly, and earlier context
+- **Featured Work**: Granite Security and Dossier
+- **Tools & Tech**: Product, identity, data, delivery, AI, and compliance tags
+- **Contact**: Email, LinkedIn, and GitHub
 
 ## Local Development
 
-Simply open `index.html` in your browser to view the site locally.
+Open `index.html` in a browser, or run a static server if you want browser tooling to behave like production.
+
+```sh
+python3 -m http.server 8000
+```
 
 ## Deployment
 
@@ -48,19 +46,11 @@ This site is configured for GitHub Pages. To deploy:
 
 ### Update Your Information
 
-Edit `index.html` to update:
-- Your name and title
-- About section content
-- Project details
-- Skills and expertise
-- Contact links (email, LinkedIn, GitHub, etc.)
+Edit both `index.html` and `classic.html` when changing public positioning, experience, featured work, tools, or contact links.
 
 ### Modify Colors
 
-Edit the CSS variables in `styles.css` under `:root`:
-- `--primary-color`: Main brand color
-- `--text-primary`: Primary text color
-- Other theme variables
+Edit the CSS variables in `styles.css` and `classic.css` under `:root`.
 
 ### Add More Sections
 

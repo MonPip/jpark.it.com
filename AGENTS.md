@@ -8,7 +8,7 @@ Maintain a professional, clear tone. Avoid casual language, slang, and humor. Be
 
 ## Project Overview
 
-This is a static portfolio website built with vanilla HTML, CSS, and JavaScript. It's designed for a Product Manager who specializes in architecture, strategy, and code prototyping. The site uses a dark cinematic design aesthetic with no frameworks or build tools.
+This is a static professional site built with vanilla HTML, CSS, and JavaScript. It's designed for a Product Manager and founder focused on AI-native B2B SaaS, healthcare data workflows, identity, compliance, and regulated systems. The primary page uses a dark cinematic design aesthetic with no frameworks or build tools.
 
 ## Local Development
 
@@ -25,7 +25,7 @@ No build process, dependencies, or local server required.
 - `index.html` - Single-page layout with all sections (Hero, About, Experience, Projects, Tools & Tech, Contact)
 - `styles.css` - All styling with CSS custom properties (dark theme), Inter font via Google Fonts
 - `script.js` - Vanilla JavaScript for canvas hero animation, cursor glow, scroll reveals, stat counters, card tilt, smooth scrolling
-- `classic.html` - Light-mode fallback version of the portfolio (independent, uses its own styles)
+- `classic.html` - Light-mode fallback version of the portfolio that should stay content-aligned with `index.html`
 
 ### Design System (CSS Variables in styles.css)
 
@@ -54,10 +54,10 @@ All theming is controlled via CSS custom properties in the `:root` selector:
 
 ### Key Interactions (script.js)
 
-1. **Canvas hero background** - Animated gradient blobs that respond to mouse position
+1. **CSS hero background** - Layered grid, noise, and vignette treatment in `styles.css`
 2. **Cursor glow** - Soft radial gradient follows mouse across the page
 3. **Scroll reveals** - IntersectionObserver triggers staggered fade-in animations
-4. **Stat counters** - Numbers ($9M+, 332%, 4.25x) count up with eased animation when visible
+4. **Stat counters** - Numbers such as 2.5K+, 60%+, 17M, $9M+, 332%, and 4.25x count up with eased animation when visible
 5. **Project card 3D tilt** - Cards tilt based on mouse position with glowing border effect
 6. **Smooth scrolling** - Navigation links scroll to sections
 7. **Active nav highlighting** - Current section highlighted in navbar
@@ -76,8 +76,8 @@ All theming is controlled via CSS custom properties in the `:root` selector:
 The site contains personalized content for James Park including:
 - Contact information: `james@jpark.app`, LinkedIn, GitHub
 - Experience section: Professional roles (Craneware, Talogy, innate.ly) with summaries, stat callouts, and accomplishments, plus an "Earlier" timeline for education and pre-PM career
-- Featured projects: Granite Security, Stock Tracker, MEAN Stack Application
-- Tools & Tech: Compact tag-based strip grouped by category (Languages, Frameworks, Identity & Auth, Data, DevOps, Product, AI)
+- Featured work: Granite Security and Dossier
+- Tools & Tech: Compact tag-based strip grouped by category (Product & Delivery, Identity & Security, APIs & Data, Build & Delivery, AI Workflow, Industry & Compliance)
 
 When adding new content:
 - Experience entries use `.experience-entry` with header, optional `.stat-row` with `.stat-callout` elements, summary, and accomplishment list
@@ -85,6 +85,7 @@ When adding new content:
 - Project cards use `.project-card` with `data-tilt` attribute for 3D hover effect
 - Tools are organized as tag groups in `.tools-strip`
 - New elements that should animate on scroll need the `reveal` class
+- Update both `index.html` and `classic.html` when changing public positioning, experience, featured work, tools, or contact links
 
 **Style note:** Do not use em dashes in site content. Use commas, periods, or restructure sentences instead.
 
